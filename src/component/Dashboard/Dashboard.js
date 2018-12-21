@@ -14,7 +14,6 @@ export default class Dashboard extends Component {
 
    componentDidMount() {
       this.getInventory()
-      console.log('anything')
    }
 
 
@@ -26,10 +25,12 @@ export default class Dashboard extends Component {
          console.log(this.state.houseList);
    };
 
-   deleteHouse = (id) => {
-      axios.delete(`/api/inventory/${id}`)
-      .then(this.props.getInventory())
-    } 
+   // deleteHouse = (id) => {
+   //    axios.delete(`/api/inventory/${id}`)
+   //       .then(res => {
+   //          this.setState({houseList: res.data})
+   //       })
+   //  } 
 
 
    render() {

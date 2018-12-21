@@ -19,7 +19,7 @@ module.exports = {
 
    deleteItem: (req, res) => {
       const db = req.app.get('db')
-      let {id} = req.params
+      const {id} = req.params
 
       db.delete_house({id}).then( response => {
          res.status(200).send(response)
