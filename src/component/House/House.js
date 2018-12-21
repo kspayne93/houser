@@ -1,10 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
-function House () {
+function House (props) {
+
       return(
-         <div id="house">
-            <h1>House</h1>
+         <div className='house_detail_box'>
+               <p>{props.property_name}</p>
+               <p>{props.address}</p>
+               <p>{props.city}</p>
+               <p>{props.state}</p>
+               <p>{props.zip}</p>
+               <button>Delete</button>
          </div>
       )
 };

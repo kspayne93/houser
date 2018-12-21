@@ -7,11 +7,12 @@ create table houses(
     zip integer
 )
 
-insert into houses(id, property_name, address, city, state, zip)
-values(1, 'Kyles House', '123 Main St', 'Spanish Fork', 'UT', 84660)
 
-insert into houses(id, property_name, address, city, state, zip)
-values(2, 'Milos House', '456 Center St', 'Salt Lake City', 'UT', 85858)
+insert into houses(property_name, address, city, state, zip)
+values('Kyles House', '123 Main St', 'Spanish Fork', 'UT', 84660)
 
-insert into houses(id, property_name, address, city, state, zip)
-values(3, 'Marisas House', '789 East St', 'Los Angeles', 'CA', 90210);
+insert into houses(property_name, address, city, state, zip)
+values('Milos House', '456 Center St', 'Salt Lake City', 'UT', 85858)
+
+insert into houses(property_name, address, city, state, zip)
+values('Marisas House', '789 East St', 'Los Angeles', 'CA', 90210)

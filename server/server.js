@@ -14,10 +14,12 @@ massive(CONNECTION_STRING).then((dbInstance) => {
 })
 
 
+// ENDPOINTS
+app.get(`/api/inventory`, controller.getAll)
 
+app.post(`/api/inventory`, controller.createItem)
 
-
-
+app.delete(`/api/inventory/:id`, controller.deleteItem)
 
 
 
