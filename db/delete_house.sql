@@ -1,1 +1,4 @@
-delete from houses where id = $(id);
+delete from houses
+where id = $(id);
+
+select * from houses;
