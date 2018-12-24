@@ -36,10 +36,6 @@ export default class Wizard extends Component {
       })
     };
 
-    deleteHouse = (id) => {
-      axios.delete(`/api/inventory/${id}`)
-    } 
-
 
 
    render() {
