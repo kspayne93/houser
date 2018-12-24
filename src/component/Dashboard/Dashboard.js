@@ -25,12 +25,9 @@ export default class Dashboard extends Component {
          console.log(this.state.houseList);
    };
 
-   // deleteHouse = (id) => {
-   //    axios.delete(`/api/inventory/${id}`)
-   //       .then(res => {
-   //          this.setState({houseList: res.data})
-   //       })
-   //  } 
+   deleteHouse = (id) => {
+      axios.delete(`/api/inventory/${id}`).then(this.getInventory())
+   }
 
 
    render() {
@@ -44,8 +41,9 @@ export default class Dashboard extends Component {
                city={house.city}
                state={house.state}
                zip={house.zip}
-               delete={this.deleteHouse} />
-
+               houseList={this.state.houseList}
+               deleteHouse={this.deleteHouse} /> 
+               {/* deleteHouse is props being passed down to the House component */}
             </div>
          )
       })
