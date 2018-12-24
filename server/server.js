@@ -9,8 +9,8 @@ app.use(express.json()); //Built in Middleware, turning request from JSON back i
 const {CONNECTION_STRING, SERVER_PORT} = process.env;
 
 massive(CONNECTION_STRING).then((dbInstance) => {
-   app.set('db', dbInstance) //the value of 'db' is dbInstance
-   console.log('db connected')
+   app.set('db', dbInstance) //the value of 'db' here is dbInstance. 
+   console.log('connected to database')
 })
 
 
