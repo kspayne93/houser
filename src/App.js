@@ -9,10 +9,15 @@ class App extends Component {
     return (
       <div className="App">
         < Header />
-        { routes }
+        { routes } 
+        {/* routes will display the Dashboard or Wizard Components */}
       </div>
     );
   }
 }
 
+//The main app lives here in App.js. All components are either rendered here directly, or they get rendered in the routes file and are rendered here, as seen above. 
+
+
 export default App;
+
