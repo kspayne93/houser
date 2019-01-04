@@ -1,0 +1,43 @@
+.dash {
+   width: 50vw;
+   background-color: #e5f4ec;
+}
+
+.dash_subheader {
+   display: flex;
+   justify-content: space-between;
+}
+
+.dash_heading {
+   font-size: 40px;
+   font-weight: 400;
+   color: #3b5249;
+   margin: 20px;
+}
+
+.dash_subheader_button {
+   margin: 20px;
+   background-color: #8aea92;
+   border: none;
+   padding: 10px;
+   font-size: 20px;
+   font-weight: 700;
+   cursor: pointer;
+}
+
+.dash_prop_container {
+   border-top: 1px solid #000;
+   margin: 0 20px 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.House {
+   height: 100%;
+   margin: 10px 0;
+   position: relative;
+   background-color: #dedede;
+   display: flex;
+   justify-content: space-between;
+}
