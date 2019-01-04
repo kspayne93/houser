@@ -1,8 +1,7 @@
 module.exports = {
-
    getAll: (req, res) => {
       const db = req.app.get('db')
-      
+
       db.get_all_houses().then(response => {
         res.status(200).send(response)
       })
@@ -10,9 +9,9 @@ module.exports = {
    
    createItem: (req, res) => {
       const db = req.app.get('db')
-      let {property_name, address, city, state, zip} = req.body
+      let {property_name, address, city, state, zip, image, mortgage, rent} = req.body
 
-      db.add_house({property_name, address, city, state, zip}).then(response => {
+      db.add_house({property_name, address, city, state, zip, image, mortgage, rent}).then(response => {
          res.status(200).send(response)
       })
    },
@@ -25,8 +24,5 @@ module.exports = {
          res.status(200).send(response)
       })
    }
-
-
-
 
 }
