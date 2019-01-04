@@ -9,6 +9,5 @@ export default (
        <Route component={ Dashboard } exact path="/" />
        <Route component={ Wizard } path="/wizard" />
      </Switch>
-
- 
+     
  )
