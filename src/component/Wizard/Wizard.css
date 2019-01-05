@@ -1,0 +1,21 @@
+.dash_subheader {
+   display: flex;
+   justify-content: space-between;
+}
+
+.add_new_listing {
+   font-size: 40px;
+   font-weight: 400;
+   color: #3b5249;
+   margin: 20px;
+}
+
+.wizard_cancel_button {
+   background-color: #fec2c2;
+   margin: 20px;
+   border: none;
+   padding: 10px;
+   font-size: 20px;
+   font-weight: 700;
+   cursor: pointer;
+}

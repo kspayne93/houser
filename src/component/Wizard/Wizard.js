@@ -5,6 +5,7 @@ import Step2 from '../Step2/Step2';
 import Step3 from '../Step3/Step3';
 import { connect } from 'react-redux';
 import { cancel } from '../../ducks/reducer';
+import '../Wizard/Wizard.css';
 
 var wizard = (
       <Switch>
@@ -16,12 +17,18 @@ var wizard = (
 
    function addListing (props) {
       return (
-         <div>
-            <h2>Add New Listing</h2>
-            <Link to='/'>
-               <button onClick={() => props.cancel()}>Cancel</button> 
-               {/* Since this is a functional component, we can access props by just calling props rather than this.props. */}
-            </Link>
+         <div className='dash' >
+            <div className='dash_subheader'>
+               <h2 className='add_new_listing'>Add New Listing</h2>
+               <Link to='/'>
+                  <button 
+                     onClick={() => props.cancel()}
+                     className='wizard_cancel_button'
+                     >Cancel
+                  </button>
+                  {/* Since this is a functional component, we can access props by just calling props rather than this.props. */}
+               </Link>
+            </div>
             { wizard }
          </div>
       )
