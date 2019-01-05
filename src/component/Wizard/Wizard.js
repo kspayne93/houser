@@ -19,7 +19,8 @@ var wizard = (
          <div>
             <h2>Add New Listing</h2>
             <Link to='/'>
-               <button onClick={() => props.cancel()}>Cancel</button>
+               <button onClick={() => props.cancel()}>Cancel</button> 
+               {/* Since this is a functional component, we can access props by just calling props rather than this.props. */}
             </Link>
             { wizard }
          </div>
@@ -27,5 +28,5 @@ var wizard = (
    }
 
 
-   
+
    export default connect( null, { cancel } )( addListing )

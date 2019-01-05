@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { updateMortgageRent } from '../../ducks/reducer';
+import { cancel } from '../../ducks/reducer';
 
 class Step3 extends Component {
    constructor() {
@@ -79,7 +80,11 @@ class Step3 extends Component {
           <Link to='/wizard/step2'>
              <button onClick={() => this.props.updateMortgageRent(mortgage, rent)}>Previous Step</button>
           </Link>
-          <button onClick={() => this.addHouse()}>Complete</button>
+          <button 
+          onClick={() => {this.addHouse(); this.props.cancel()}}
+          >Complete</button> 
+          
+
           
         </div>
       )
@@ -101,4 +106,8 @@ function mapStateToProps(reduxState) {
    }
 }
 
-export default connect( mapStateToProps, { updateMortgageRent } )( Step3 );
+//mapStateToProps - You will see shortly that some of these parameters can be a function or an object. However, mapStateToProps needs to be a function. This function does exactly what the name suggests, connect state from the store to corresponding props. This make it possible to access your reducer state objects from within your React components. This function will subscribe to the Redux store and any updates will update props automatically. mapStateToProps needs to return an object, where the key is the new prop name to be used in the React app and the value is the name of the reducer function.
+
+export default connect( mapStateToProps, { updateMortgageRent, cancel })( Step3 );
+
+// If you want to wisen up your component, use the connect method from react-redux. Connecting your component gives it access to the global state object. It’s highly unlikely however, that our component needs access to everything in the state object. We can slice off only what we want the component to be aware of in the mapStateToProps function.
