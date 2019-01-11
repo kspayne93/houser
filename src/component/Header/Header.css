@@ -8,7 +8,7 @@
    position: fixed;
    top: 0;
    z-index: 1;
-}
+
 
 .Header>h1, .Header>img {
    position: absolute;

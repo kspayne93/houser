@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         < Header />
-        { routes } 
+        { routes }
         {/* routes will display the Dashboard or Wizard Components */}
       </div>
     );

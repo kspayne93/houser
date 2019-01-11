@@ -80,7 +80,7 @@ function reducer (state=initialState, action) {
          });
 
       case CANCEL:
-         return Object.assign( {}, state,action.payload );
+         return Object.assign( {}, state, action.payload );
 
       default:
          return Object.assign ( {}, state );
